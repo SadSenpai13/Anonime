@@ -1,0 +1,59 @@
+$md1250: 1249.98;
+
+$md1: 1199.98;
+$md2: 990.98;
+$md3: 768.98;
+$md4: 479.98;
+
+
+$burgerBreakpoint: $md3;
+$burgerColor: #ffff;
+$burgerActiveColor: 'white';
+
+$bgColor: #192026;
+
+body {
+    background: $bgColor;
+}
+
+.title {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 112.5%;
+    color: #FFFFFF;
+
+}
+[class*="__container"] { //для усіх класів, де буде зусьтрічатись "__container"
+    max-width: 1170px;
+    margin: 0px auto;
+}
+@media (max-width: ($md1 + px)){
+    [class*="__container"] {
+        max-width: 970px;
+        display: block;
+        
+
+    }
+}
+@media (max-width: ($md2 + px)){
+    [class*="__container"] {
+        max-width: 750px;
+
+    }
+}
+@media (max-width: ($md3 + px)){
+    [class*="__container"] {
+        // padding-left: 15px;
+        // padding-right: 15px;
+        max-width: none;
+    }
+}
+
+
+@import 'header.scss';
+@import 'review.scss';
+@import 'new-realease.scss';
+@import 'anime_page.scss';
+@import 'anime_list.scss';
+
